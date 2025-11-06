@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Моє портфоліо — PWA</title>
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0f62fe">
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="header">
+    <h1>Моє портфоліо</h1>
+    <nav class="nav">
+        <a href="#skills">Навички</a>
+        <a href="#projects">Проєкти</a>
+        <a href="#media">Медіа</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section id="skills">
+        <h2>Мої навички</h2>
+        <ul class="list-bullets">
+            <li>HTML5 — основи</li>
+            <li>CSS — базові стилі</li>
+            <li>JavaScript — початківець</li>
+            <li>PWA — manifest, service worker</li>
+        </ul>
+
+        <ol class="list-steps">
+            <li>Планування структури</li>
+            <li>Верстка компонентів</li>
+            <li>Підключення manifest</li>
+            <li>Service Worker</li>
+        </ol>
+    </section>
+
+    <section id="projects">
+        <h2>Мої проєкти</h2>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>Назва</th>
+                    <th>Технології</th>
+                    <th>Статус</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Перший додаток</td>
+                    <td>PWA (HTML/CSS/JS)</td>
+                    <td>В процесі</td>
+                </tr>
+                <tr>
+                    <td>Портфоліо</td>
+                    <td>HTML/CSS</td>
+                    <td>Готово</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="media">
+        <h2>Графіка, відео, аудіо</h2>
+
+        <figure class="media-card">
+            <img src="/assets/media/sample.jpg" alt="Зразок зображення" loading="lazy">
+            <figcaption>Приклад зображення</figcaption>
+        </figure>
+
+        <figure class="media-card">
+            <video controls preload="metadata" width="100%">
+                <source src="/assets/media/sample.mp4" type="video/mp4">
+                Ваш браузер не підтримує відео-тег.
+            </video>
+            <figcaption>Приклад відео</figcaption>
+        </figure>
+
+        <figure class="media-card">
+            <audio controls preload="metadata">
+                <source src="/assets/media/sample.mp3" type="audio/mpeg">
+                Ваш браузер не підтримує аудіо-тег.
+            </audio>
+            <figcaption>Приклад аудіо</figcaption>
+        </figure>
+    </section>
+</main>
+
+<footer class="footer">
+    <small>© 2025 Моє ім’я</small>
+</footer>
+
+<script src="/src/app.js" defer></script>
+</body>
+</html>

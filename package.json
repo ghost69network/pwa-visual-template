@@ -1,0 +1,16 @@
+{
+  "name": "pwa-visual-template",
+  "version": "1.0.0",
+  "description": "PWA Visual Template — навчальний проєкт",
+  "private": true,
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "http-server public -p 5173 --cors",
+    "start": "npm run dev"
+  },
+  "author": "Твоє ім’я",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
