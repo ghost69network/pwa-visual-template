@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Модель візуального форматування для PWA</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#0f62fe" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<header class="header">
+    <h1>Модель візуального форматування для PWA</h1>
+    <nav class="nav">
+        <a href="#lists">Списки</a>
+        <a href="#table">Таблиці</a>
+        <a href="#media">Графіка/анімація</a>
+        <a href="#av">Відео/аудіо</a>
+    </nav>
+</header>
+
+<main class="container">
+    <!-- 1. Організація списків -->
+    <section id="lists">
+        <h2>1. Організація списків</h2>
+
+        <h3>Нумерований список</h3>
+        <ol class="list-steps">
+            <li>Підготовка середовища</li>
+            <li>Структура проєкту</li>
+            <li>Списки і таблиці</li>
+            <li>Медіа та анімація</li>
+            <li>Service Worker + офлайн</li>
+        </ol>
+
+        <h3>Маркірований список</h3>
+        <ul class="list-bullets">
+            <li>Адаптивний контейнер</li>
+            <li>Читабельні заголовки</li>
+            <li>Охайні відступи</li>
+            <li>Прості стилі без зайвого</li>
+        </ul>
+    </section>
+
+    <!-- 2. Таблиця -->
+    <section id="table">
+        <h2>2. Таблиця</h2>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>Назва проєкту</th>
+                    <th>Технологія</th>
+                    <th>Статус</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Перший додаток</td>
+                    <td>PWA (HTML/CSS/JS)</td>
+                    <td>В процесі</td>
+                </tr>
+                <tr>
+                    <td>Портфоліо</td>
+                    <td>HTML/CSS</td>
+                    <td>Готово</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 3. Графіка, анімація -->
+    <section id="media">
+        <h2>3. Графіка та анімація</h2>
+        <figure class="media-card">
+            <img src="./assets/media/sample.jpg" alt="Зразок зображення" loading="lazy">
+            <figcaption>Приклад зображення (lazy-load)</figcaption>
+        </figure>
+
+        <div class="demo-anim">Проста CSS-анімація</div>
+    </section>
+
+    <!-- 4. Відео та аудіо -->
+    <section id="av">
+        <h2>4. Відео та аудіо</h2>
+
+        <figure class="media-card">
+            <audio controls preload="metadata" style="width:100%">
+                <source src="./assets/media/sample.mp3" type="audio/mpeg">
+                Ваш браузер не підтримує аудіо-тег.
+            </audio>
+            <figcaption>Аудіо (mp3)</figcaption>
+        </figure>
+
+        <figure class="media-card">
+            <video controls preload="metadata" width="100%">
+                <source src="./assets/media/sample.mp4" type="video/mp4">
+                Ваш браузер не підтримує відео-тег.
+            </video>
+            <figcaption>Відео (mp4)</figcaption>
+        </figure>
+    </section>
+</main>
+
+<footer class="footer">
+    <small>© 2025 Моє ім’я</small>
+</footer>
+
+<script src="./src/app.js" defer></script>
+</body>
+</html>

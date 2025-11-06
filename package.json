@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "PWA Visual Template — навчальний проєкт",
   "private": true,
-  "main": "src/app.js",
+  "main": "docs/src/app.js",
   "scripts": {
-    "dev": "http-server public -p 5173 --cors",
+    "dev": "http-server docs -p 5173 --cors",
     "start": "npm run dev"
   },
   "author": "Твоє ім’я",

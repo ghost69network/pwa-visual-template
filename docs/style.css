@@ -1,6 +1,6 @@
 :root {
     --bg: #f0f2f5;
-    --card: #ffffff;
+    --card: #fff;
     --text: #222;
     --muted: #666;
     --brand: #0f62fe;
@@ -18,6 +18,7 @@ body {
     line-height: 1.5;
 }
 
+/* Шапка */
 .header {
     position: sticky; top: 0; z-index: 10;
     background: var(--card);
@@ -28,10 +29,13 @@ body {
 }
 .header h1 { margin: 0; font-size: 20px; }
 .nav a {
-    color: var(--brand); text-decoration: none; margin-right: 12px;
+    color: var(--brand);
+    text-decoration: none;
+    margin-right: 12px;
 }
 .nav a:hover { text-decoration: underline; }
 
+/* Контейнер */
 .container {
     width: min(960px, 92%);
     margin: 20px auto;
@@ -41,16 +45,17 @@ body {
     box-shadow: var(--shadow);
 }
 
+/* Заголовки */
 h2 {
     margin-top: 0;
     padding-bottom: 6px;
     border-bottom: 2px solid var(--brand);
 }
+h3 { margin-bottom: 6px; }
 
 /* Списки */
+.list-steps { padding-left: 20px; }
 .list-bullets { padding-left: 20px; }
-.list-steps { padding-left: 20px; counter-reset: step; }
-.list-steps > li { margin: 6px 0; }
 
 /* Таблиця */
 .table-wrap { overflow-x: auto; }
@@ -65,9 +70,12 @@ th, td {
     padding: 10px 12px;
     text-align: left;
 }
-th { background: #f7f7f9; color: #444; }
+th {
+    background: #f7f7f9;
+    color: #444;
+}
 
-/* Медіа-карточки */
+/* Медіа */
 .media-card {
     background: #fafafa;
     border: 1px solid var(--border);
@@ -76,8 +84,36 @@ th { background: #f7f7f9; color: #444; }
     margin: 12px 0;
     box-shadow: var(--shadow);
 }
-.media-card img, .media-card video { display: block; width: 100%; height: auto; border-radius: 8px; }
-.media-card figcaption { color: var(--muted); margin-top: 6px; }
+.media-card img, .media-card video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.media-card figcaption {
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+/* Анімація */
+.demo-anim {
+    margin: 12px 0;
+    padding: 18px;
+    text-align: center;
+    color: #1f2937;
+    border: 2px dashed #c7d2fe;
+    background: #eef2ff;
+    border-radius: 10px;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: none; }
+    50% { transform: scale(1.02); box-shadow: 0 8px 22px rgba(15,98,254,0.15); }
+}
 
 /* Футер */
-.footer { text-align: center; color: var(--muted); padding: 24px 8px; }
+.footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 24px 8px;
+}
